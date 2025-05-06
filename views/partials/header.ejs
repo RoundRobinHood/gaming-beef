@@ -1,0 +1,17 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title><%= pageTitle %></title>
+  <link href='images/logo.png' rel='icon' type='image/png'/>
+  <link href='styles/main.css' rel='stylesheet'/>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typeit@8.7.1/dist/index.umd.js"></script>
+
+  <% if(pageTitle === 'Events') { %>
+    <link href='styles/events.css' rel='stylesheet'/>
+  <% } %>
+
+  <% if(pageTitle === 'Contact') { %>
+    <link href='styles/contact.css' rel='stylesheet'/>
+  <% } %>
+</head>

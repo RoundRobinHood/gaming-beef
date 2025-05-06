@@ -1,0 +1,20 @@
+<h2>🥩 GAMING BEEF: WEEK OF THE CUT</h2>
+<p class='terminal'>
+  <span class='heading'> terminal </span>
+  <span class='content'>
+    site@gamingbeef.exequtech.com:~/html$ ls -a events/ | render <br/>
+    rendering events...
+  </span>
+</p>
+<div class='event-container'>
+  <% for(let event of events) { %>
+  <div>
+    <h3><%- event.title %></h3>
+    <p class='description'><%= event.description %></p>
+    <p class='date'>📅 Date: <%= event.date %></p>
+    <p class='location'>📍 Location: <%= event.location %></p>
+    <br/>
+    <img src='<%= event.imageUrl %>'/>
+  </div>
+  <% } %>
+</div>

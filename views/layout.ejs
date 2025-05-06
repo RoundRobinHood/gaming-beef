@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') %>
+<body>
+  <div class='container'>
+    <header>
+      <h1 class='typewriter'> &gt <%= pageTitle %>.html </h1>
+      <br/>
+      <nav>
+        <ul>
+          <li><a href='home'>Home</a></li>
+          <li><a href='about'>About</a></li>
+          <li><a href="events">Events</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <%- include(contentPath) %>
+    </main>
+    <%- include('partials/footer') %>
+  </div>
+</body>
+</html>

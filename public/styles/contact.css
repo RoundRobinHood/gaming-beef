@@ -1,0 +1,28 @@
+.form-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 40%;
+  border: 1px solid var(--harshGreen);
+  padding: 1rem;
+}
+
+form > label {
+  display: flex;
+  margin: 1rem 0;
+}
+
+form > label :not(.label-text) {
+  width: 50%;
+  background-color: var(--harshPurple);
+  border: 1px solid var(--harshPink);
+  padding: 0.2rem;
+}
+
+form > label .label-text {
+  flex-grow: 1;
+}

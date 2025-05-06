@@ -1,0 +1,29 @@
+<% if(pageTitle === 'Contact') { %>
+<script>
+  document.querySelector('form').addEventListener('submit', async (e) => {
+    event.preventDefault();
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) throw new Error("Request failed");
+
+      window.location.href = 'thankyou?name=' + encodeURIComponent(data.name);
+    } catch (error) {
+      console.error("Error:", error);
+      document.getElementById("response").innerText = "Submission failed.";
+    }
+  });
+</script>
+<% } %>

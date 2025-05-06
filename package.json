@@ -1,0 +1,30 @@
+{
+  "name": "wpr381",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoundRobinHood/wpr381.git"
+  },
+  "keywords": [
+    "ejs",
+    "expressjs",
+    "serverless"
+  ],
+  "author": "RoundRobinHood & friends",
+  "bugs": {
+    "url": "https://github.com/RoundRobinHood/wpr381/issues"
+  },
+  "homepage": "https://github.com/RoundRobinHood/wpr381#readme",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
