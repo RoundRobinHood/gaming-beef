@@ -30,15 +30,17 @@ setPageRoutes(app);
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).render('error', {
-    message: 'Something went wrong!',
+  res.status(err.status || 500).render('error', {
+    message: err.message || 'Something went wrong!',
     error: process.env.NODE_ENV === 'development' ? err : {}
   });
 });
 
 // 404 handler
-app.use((req, res) => {
-  res.status(404).render('404', { message: 'Page not found' });
+app.use((req, res, next) => {
+  const err = new Error('Page not found');
+  err.status = 404;
+  next(err);
 });
 
 // Start server

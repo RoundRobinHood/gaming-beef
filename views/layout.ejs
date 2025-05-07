@@ -1,24 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/header') %>
+<head>
+  <%- include('partials/header') %>
+  <style>
+    body {
+      overflow: hidden;
+    }
+    canvas#crtEffect {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+  </style>
+</head>
 <body>
-  <div class='container'>
-    <header>
-      <h1 class='typewriter'> &gt <%= pageTitle %>.html </h1>
-      <br/>
-      <nav>
-        <ul>
-          <li><a href='home'>Home</a></li>
-          <li><a href='about'>About</a></li>
-          <li><a href="events">Events</a></li>
-          <li><a href="contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+  <canvas id="crtEffect"></canvas>
+  <div class="container">
+    <button class="menu-toggle">☰</button>
+    <aside class="sidebar">
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/events">Events</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </aside>
     <main>
       <%- include(contentPath) %>
     </main>
     <%- include('partials/footer') %>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+  <script>
+    let crtShader;
+
+    function preload() {
+      crtShader = loadShader('https://gist.githubusercontent.com/EstiaExequtech/5a2e8a9e8b1b8f9d8f9e/raw/crt.frag', null);
+    }
+
+    function setup() {
+      createCanvas(windowWidth, windowHeight, WEBGL);
+      noStroke();
+      shader(crtShader);
+      crtShader.setUniform('u_resolution', [width, height]);
+    }
+
+    function draw() {
+      crtShader.setUniform('u_time', millis() / 1000.0);
+      rect(0, 0, width, height);
+    }
+
+    function windowResized() {
+      resizeCanvas(windowWidth, windowHeight);
+      crtShader.setUniform('u_resolution', [width, height]);
+    }
+
+    // Typing animation for terminals
+    document.addEventListener('DOMContentLoaded', () => {
+      const terminals = document.querySelectorAll('.terminal .content');
+      terminals.forEach((terminal, index) => {
+        const originalText = terminal.textContent.trim();
+        terminal.textContent = '';
+        let i = 0;
+        function type() {
+          if (i < originalText.length) {
+            terminal.textContent += originalText.charAt(i);
+            i++;
+            setTimeout(type, 50);
+          }
+        }
+        setTimeout(type, index * 500); // Staggered start for each terminal
+        terminal.style.opacity = 1;
+      });
+    });
+  </script>
 </body>
 </html>
