@@ -90,8 +90,26 @@ main {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  max-width: 1900px;
+  margin: 0 auto;
+  background-image: linear-gradient(45deg, rgba(0, 255, 133, 0.1) 25%, transparent 25%, transparent 50%, rgba(0, 255, 133, 0.1) 50%, rgba(0, 255, 133, 0.1) 75%, transparent 75%, transparent);
+  background-size: 30px 30px;
+  animation: subtleShift 20s linear infinite;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--vibrantPurple), var(--darkNavy));
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
   position: absolute;
   top: -50%;
   left: -50%;
