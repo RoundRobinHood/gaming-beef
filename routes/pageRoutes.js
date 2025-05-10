@@ -4,14 +4,14 @@ let events = [
     description: "Rack up as many achievements as possible in a selected community game. Whether it's a pixel roguelike or a corporate sim, you've got 24 hours to become a beast. Screenshot your progress. Brag. Climb the leaderboard. ",
     date: "May 27, 2025",
     location: "online",
-    imageUrl: "images/slice_the_beef.jpg",
+    imageUrl: "images/achievements_img.png",
   },
   {
     title: "🧂 <span class='title'>Salt the Beef</span>",
     description: "It's modding mayhem. Throw together a cursed modpack, upload the results, and compare for Most Broken, Most Hilarious and Most Impressive. Clip your creations or share screenshots, and make the judges weep. ",
     date: "May 28, 2025",
     location: "online",
-    imageUrl: "images/slice_the_beef.jpg",
+    imageUrl: "images/coding_img.jpg",
   },
   {
     title: "🔪 <span class='title'>Slice the Beef</span>",
@@ -25,7 +25,7 @@ let events = [
     description: "Submit the most absurd, dramatic, or unhinged out-of-context gaming clip you've got. No setup. No story. Just vibes. The community will vote for their favorite, and the top clip becomes site canon.",
     date: "May 30, 2025",
     location: "online",
-    imageUrl: "images/slice_the_beef.jpg",
+    imageUrl: "images/gaming_img.jpg",
   }
 ];
 
