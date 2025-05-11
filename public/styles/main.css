@@ -48,11 +48,16 @@ a:hover {
   /* border-radius: 15px; */
 }
 
+.sidebar h2{
+  color: var(--coolGreen);
+}
+
 .sidebar ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  margin-top: 2em;
 }
 
 .sidebar ul li a {
@@ -71,6 +76,10 @@ a:hover {
   color: var(--brightCyan);
   background: rgba(0, 255, 133, 0.2);
   transform: translateX(10px);
+}
+.active-link, .active-link span {
+  color: var(--coolGreen); /* Optional: improve contrast */
+
 }
 
 .menu-toggle {
