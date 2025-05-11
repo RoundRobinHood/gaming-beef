@@ -50,6 +50,8 @@ a:hover {
 
 .sidebar h2{
   color: var(--coolGreen);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .sidebar ul {
@@ -90,7 +92,7 @@ a:hover {
   padding: 1rem;
   background: none;
   border: none;
-  position: fixed;
+  position: relative;
   top: 1rem;
   left: 1rem;
   z-index: 1001;
@@ -230,12 +232,18 @@ button:hover {
     display: block;
   }
   .sidebar {
-    transform: translateX(-100%);
+    left: -250px;
+    transition: left 0.3s ease;
+    padding-top: 80px;
   }
-  .sidebar.active {
+  /* .sidebar.active {
     transform: translateX(0);
+  } */
+   .sidebar.open {
+    left: 0;
   }
   main {
+    transition: margin-left 0.3s ease;
     margin-left: 0;
     padding: 1rem;
   }

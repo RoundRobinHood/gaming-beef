@@ -87,6 +87,19 @@
         terminal.style.opacity = 1;
       });
     });
+
+    //Sidebar hiding/showing on smaller screens
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    const main = document.querySelector('main');
+
+    toggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      main.classList.toggle('shifted');
+    });
+  });
   </script>
 </body>
 </html>
