@@ -82,4 +82,7 @@ export default function setPageRoutes(app) {
     });
   });
 
+  app.get('/test', (req, res) => {
+    res.render('pages/test');
+  });
 }

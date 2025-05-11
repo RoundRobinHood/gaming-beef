@@ -44,30 +44,7 @@
     </main>
     <%- include('partials/footer') %>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
   <script>
-    let crtShader;
-
-    function preload() {
-      crtShader = loadShader('https://gist.githubusercontent.com/EstiaExequtech/5a2e8a9e8b1b8f9d8f9e/raw/crt.frag', null);
-    }
-
-    function setup() {
-      createCanvas(windowWidth, windowHeight, WEBGL);
-      noStroke();
-      shader(crtShader);
-      crtShader.setUniform('u_resolution', [width, height]);
-    }
-
-    function draw() {
-      crtShader.setUniform('u_time', millis() / 1000.0);
-      rect(0, 0, width, height);
-    }
-
-    function windowResized() {
-      resizeCanvas(windowWidth, windowHeight);
-      crtShader.setUniform('u_resolution', [width, height]);
-    }
 
     // Typing animation for terminals
     document.addEventListener('DOMContentLoaded', () => {
