@@ -47,23 +47,27 @@
   <script>
 
     // Typing animation for terminals
-    document.addEventListener('DOMContentLoaded', () => {
-      const terminals = document.querySelectorAll('.terminal .content');
-      terminals.forEach((terminal, index) => {
-        const originalText = terminal.textContent.trim();
-        terminal.textContent = '';
-        let i = 0;
-        function type() {
-          if (i < originalText.length) {
-            terminal.textContent += originalText.charAt(i);
-            i++;
-            setTimeout(type, 50);
-          }
-        }
-        setTimeout(type, index * 500); // Staggered start for each terminal
-        terminal.style.opacity = 1;
-      });
-    });
+document.addEventListener('DOMContentLoaded', () => {
+  const contentElement = document.querySelector('.terminal .content');
+  const cursor = document.querySelector('.terminal .cursor');
+
+  const originalHTML = contentElement.innerHTML;
+  contentElement.innerHTML = ''; // clear initial text
+
+  let i = 0;
+
+  function type() {
+    if (i <= originalHTML.length) {
+      contentElement.innerHTML = originalHTML.substring(0, i);
+      contentElement.parentNode.appendChild(cursor); // move cursor inline
+      i++;
+      setTimeout(type, 40);
+    }
+  }
+
+  type();
+});
+
 
     //Sidebar hiding/showing on smaller screens
 
@@ -76,6 +80,8 @@
       sidebar.classList.toggle('open');
       main.classList.toggle('shifted');
     });
+
+    
   });
   </script>
 </body>
