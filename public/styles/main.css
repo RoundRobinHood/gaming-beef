@@ -23,6 +23,7 @@ body {
 a {
   text-decoration: none;
   transition: all 0.3s ease;
+  
 }
 
 a:hover {
@@ -36,11 +37,15 @@ a:hover {
   left: 0;
   width: 250px;
   height: 100%;
-  background: linear-gradient(180deg, var(--darkNavy), var(--vibrantPurple));
+  background: rgba(15, 23, 42, 0.9);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(26, 7, 40, 0.9));
+  /* background: linear-gradient(180deg, var(--darkNavy), var(--vibrantPurple)); */
   padding: 2rem 1rem;
   box-shadow: 2px 0 15px rgba(0, 0, 0, 0.5);
   z-index: 1000;
   transition: transform 0.3s ease;
+  border-right: 3px solid var(--coolGreen);
+  /* border-radius: 15px; */
 }
 
 .sidebar ul {
@@ -54,7 +59,9 @@ a:hover {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--softSilver);
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
   padding: 0.8rem 1rem;
   border-radius: 8px;
   transition: all 0.3s ease;
