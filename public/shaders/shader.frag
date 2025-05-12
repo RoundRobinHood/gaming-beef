@@ -58,6 +58,9 @@ uniform vec2 resolution;
 uniform float angle;
 uniform vec2 origin;
 
+uniform float tDiv;
+uniform float noiseAmplitude;
+
 void main() {
   vec2 gridded = floor(vUV * resolution) / resolution;
 
@@ -65,9 +68,9 @@ void main() {
   vec2 noiseDir = vec2(cos(noiseAngle), sin(noiseAngle));
   float n = snoise(gridded * 5.0 + noiseDir * time * 0.001);
 
-  vec2 gradientDir = vec2(cos(angle), sin(angle));
+  vec2 gradientDir = vec2(cos(angle), sin(angle)) / tDiv;
   // float t = (gridded.x + gridded.y) / sqrt(2.0) + n * 0.2;
-  float t = dot(gridded - origin, gradientDir) + n * 0.2;
+  float t = dot(gridded - origin, gradientDir) + n * noiseAmplitude;
 
   vec3 col = mix(colorA, colorB, t);
   gl_FragColor = vec4(col, 1.0);
