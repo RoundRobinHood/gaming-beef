@@ -1,13 +1,60 @@
 <h2>Gaming Beef: The Retro Gaming Community</h2>
 <p>
-  We arrange gaming events with everyone that has a free Sunday, including snacks, music, and some LAN.
-  The esports competitions can get very competitive and fun, so do bring yourself some popcorn if you decide to join in person or on our livestreams!
-</p>
+  </p>
+
 <div class="terminal">
   <span class="heading">Terminal</span>
   <span class="content">
     site@gamingbeef.exequtech.com:~/html$ echo "Join the retro revolution!"<br/>
     Join the retro revolution!
+  </span>
+  <span class="cursor">|</span>
+</div>
+
+<div class="terminal">
+  <span class="heading">Terminal</span>
+  <span class="content">
+    site@gamingbeef.exequtech.com:~/about$ whoami<br/>
+    > Gaming Beef: A retro/modern gaming collective<br/><br/>
+    site@gamingbeef.exequtech.com:~/about$ cat mission.txt<br/>
+    > Mission: <%= about.mission %><br/>
+  </span>
+  <span class="cursor">|</span>
+</div>
+
+
+<div class="terminal">
+  <span class="heading">Terminal</span>
+  <span class="content">
+    site@gamingbeef.exequtech.com:~/about$ ls -la /team/<br/>
+    > drwxr-xr-x  4 root 4096 May 12 2025 .<br/>
+    <% about.team.forEach(member => { %>
+      > -rw-r--r--   <%= member.role %> admin <b><%= member.name %></b><br/>
+    <% }); %>
+  </span>
+  <span class="cursor">|</span>
+</div>
+
+
+<div class="terminal">
+  <span class="heading">Terminal</span>
+  <span class="content">
+    site@gamingbeef.exequtech.com:~/about$ stats<br/>
+    > Events Hosted: <%= about.eventsHosted %><br/>
+    > Games Played: <%= about.gamesCount %>
+  </span>
+  <span class="cursor">|</span>
+</div>
+
+
+<div class="terminal">
+  <span class="heading">Terminal</span>
+  <span class="content">
+    site@gamingbeef.exequtech.com:~/about$ ./rules.sh<br/>
+    > 1. Don't be a loot hog<br/>
+    > 2. Glitches are features<br/>
+    > 3. Salt stays in-game<br/>
+    > 4. Pause for snacks<br/>
   </span>
   <span class="cursor">|</span>
 </div>

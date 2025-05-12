@@ -36,10 +36,19 @@ let contactors = [];
  * @param { Express } app
  */
 export default function setPageRoutes(app) {
+  // Updated home route with previousWinner data:
   app.get(['/', '/home', '/index'], (req, res) => {
+    const previousWinner = {
+      name: "Jimmy McBeef",
+      event: "Beef Jerky Challenge",
+    };
+    const activePlayers = 575;
     res.render('layout', {
       contentPath: 'pages/home',
       pageTitle: 'Home',
+      events,
+      previousWinner,
+      activePlayers,
     });
   });
 
@@ -47,6 +56,17 @@ export default function setPageRoutes(app) {
     res.render('layout', {
       contentPath: 'pages/about',
       pageTitle: 'About',
+      about: {
+        mission: "We arrange gaming events with everyone that has a free Sunday, including snacks, music, and some LAN. The esports competitions can get very competitive and fun, so do bring yourself some popcorn if you decide to join in person or on our livestreams!",
+        eventsHosted: 42,
+        gamesCount: 137,
+        team: [
+          { name: "Brian Felgate", role: "600504" },
+          { name: "Cayden Frank", role: "578131" },
+          { name: "Estian Stander", role: "600899" },
+          { name: "Janco Nieuwoudt", role: "600175" }
+        ]
+      }
     });
   });
 

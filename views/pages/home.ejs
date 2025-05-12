@@ -12,3 +12,39 @@
   </span>
   <span class="cursor">|</span>
 </div>
+<div class="active-events">
+  <h3 class="title">Beef Metrics</h3>
+  <span class="no-of-active-events"><%= events.length %></span>
+  <p class="description">events currently active</p>
+</div>
+<div class="active-players">
+  <h3 class="title">Beef-o-Meter</h3>
+  <div class="beef-o-meter-bar">
+    <div class="beef-o-meter-fill" style="--width: <%= (activePlayers / 1000) * 100 %>%"></div>
+  </div>
+  <%
+    let level = "";
+    if(activePlayers < 200){
+      level = "Very Raw";
+    } else if(activePlayers < 400){
+      level = "Raw";
+    } else if(activePlayers < 600){
+      level = "Medium Rare";
+    } else if(activePlayers < 800){
+      level = "Medium";
+    } else {
+      level = "Well Done";
+    }
+  %>
+  <span>
+    <%= level %>
+  </span>
+  <p class="cooking-level">
+    <%= activePlayers %> players
+  </p>
+</div>
+<div class="previous-winners">
+  <h3 class="title">The Butcher</h3>
+  <span class="winner-name"><%= previousWinner.name %></span>
+  <p class="event-won">Winner of the <%= previousWinner.event %></p>
+</div>

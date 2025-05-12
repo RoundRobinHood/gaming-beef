@@ -1,0 +1,20 @@
+.beef-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+  }
+  
+  .stat-card {
+    background: rgba(0,0,0,0.7);
+    border: 1px solid #ff4500;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    min-width: 120px;
+  }
+  
+  .stat-card .value {
+    font-size: 2rem;
+    color: #ff4500;
+    font-family: 'Courier New', mono
+    }

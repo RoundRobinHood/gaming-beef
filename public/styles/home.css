@@ -1,0 +1,102 @@
+:root {
+    --darkNavy: #1a1a2e;
+    --vibrantPurple: #7c3aed;
+    --coolGreen: #16c79a;
+    --softSilver: #c0c0c0;
+    --highlight: #f0f0f0;
+}
+
+.active-events,
+.previous-winners,
+.active-players {
+    background: linear-gradient(135deg, var(--darkNavy), rgba(124, 58, 237, 0.15));
+    border: 2px solid var(--vibrantPurple);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    margin-bottom: 1.5rem;
+    margin-right: 2rem;
+    width: 20rem;      
+    height: 15.6rem;   
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+.active-players {
+    width: 52.75rem;     
+}
+
+.previous-winners {
+    margin-right: 0;   
+}
+
+.active-events:hover,
+.previous-winners:hover,
+.active-players:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.5);
+}
+
+.active-events .title,
+.previous-winners .title,
+.active-players .title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--coolGreen);
+    margin-bottom: 0.5rem;
+}
+
+.active-events p,
+.previous-winners p,
+.active-players p {
+    font-size: 1.1rem;
+    color: var(--softSilver);
+    margin-bottom: 0.5rem;
+}
+
+.active-events span{
+    font-size: 4rem;
+    color: var(--highlight);
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.previous-winners span,
+.active-players span {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--highlight);
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    margin: 1.2rem 0;
+    text-align: center;
+}
+
+.beef-o-meter-bar {
+    width: 80%;
+    height: 30px; 
+    background: #333;
+    border: 2px solid #ff4757; 
+    border-radius: 10px;
+    margin: 0 auto 0.5rem auto;
+    overflow: hidden;
+}
+
+.beef-o-meter-fill {
+    width: var(--width, 0%);
+    height: 100%;
+    background: linear-gradient(90deg, #ff6b6b 0%, #ff9a8d 50%, #8d5524 100%);
+    transition: width 0.3s ease;
+}
+
+.cooking-level {
+    font-size: 1.2rem;
+    color: var(--softSilver);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
