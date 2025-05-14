@@ -10,7 +10,7 @@ Welcome to **Gaming Beef**, a retro-themed gaming community website designed to 
 - 📫 **Contact Form:** Users can reach out to the team and receive a confirmation response.
 - 💡 **Terminal Aesthetic:** Simulated terminal UI elements for retro vibes.
 - 📱 **Responsive Layout:** Hamburger sidebar for mobile navigation.
-- ⚡️ **p5.js CRT Shader** Stylized canvas shader effect to simulate old CRT displays.
+- ⚡️ **p5.js Living-Gradient Shader** Stylized canvas shader effect for animated pixelated gradients.
 
 ---
 
@@ -28,6 +28,7 @@ Welcome to **Gaming Beef**, a retro-themed gaming community website designed to 
 
 1. Run `npm install` to install dependencies.
 2. Use `npm run dev` to start the development server with nodemon.
+3. Use `npm run start` to start the production server configuration.
 
 ## Team Members
 - Brian Felgate 600504
