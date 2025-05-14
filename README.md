@@ -28,7 +28,6 @@ Welcome to **Gaming Beef**, a retro-themed gaming community website designed to 
 
 1. Run `npm install` to install dependencies.
 2. Use `npm run dev` to start the development server with nodemon.
-3. Add your own route handlers and middleware as needed.
 
 ## Team Members
 - Brian Felgate 600504
@@ -37,8 +36,13 @@ Welcome to **Gaming Beef**, a retro-themed gaming community website designed to 
 - Janco Nieuwoudt 600175
 
 ## Screenshots
-### Home
-### About
-### Events
-### Contact
+### Home Page
+![Home Page](public/screenshots/home.png)
+### About Page
+![About Page](public/screenshots/about.png)
+### Events Page
+![Events Page](public/screenshots/events.png)
+### Contact Page
+![Contact Page](public/screenshots/contact.png)
 ### Mobile View
+![Mobile View](public/screenshots/mobile.png)
