@@ -17,7 +17,7 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     margin-bottom: 1.5rem;
     margin-right: 2rem;
-    width: 20rem;      
+    width: 17rem;      
     height: 15.6rem;   
     display: inline-block;
     text-align: center;
@@ -25,7 +25,7 @@
 }
 
 .active-players {
-    width: 52.75rem;     
+    width: 39rem;     
 }
 
 .previous-winners {
